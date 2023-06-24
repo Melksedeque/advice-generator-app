@@ -1,0 +1,15 @@
+footer.attribution {
+    background: $dark_blue;
+    color: $light_cyan;
+    font: $light 12px $font;
+    padding: 1rem;
+    text-align: center;
+    a {
+        color: white;
+        transition: all .25s ease;
+        &:hover {
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

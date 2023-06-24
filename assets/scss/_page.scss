@@ -1,0 +1,18 @@
+main.page {
+    header.site-header {}
+    section.site-content {
+        .card {
+            h2 {}
+            p {}
+            div.divider {
+                .desktop {
+                    display: block;
+                }
+                .mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+    footer.site-footer {}
+}

@@ -1,0 +1,22 @@
+/**
+*   COLORS
+*/
+$light_cyan: hsl(193, 38%, 86%);
+$neon_green: hsl(150, 100%, 66%);
+$grayish_blue: hsl(217, 19%, 38%);
+$dark_grayish_blue: hsl(217, 19%, 24%);
+$dark_blue: hsl(218, 23%, 16%);
+
+/**
+*   FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;800&display=swap');
+$font: 'Manrope', sans-serif;
+$light: 200;
+$bold: 800;
+
+/**
+* SCREEN SIZES
+*/
+$mobile: 375px;
+$desktop: 1440px;

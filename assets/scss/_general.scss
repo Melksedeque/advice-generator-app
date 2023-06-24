@@ -1,0 +1,13 @@
+.container-app {
+    max-width: 560px;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media screen and (max-width: $mobile) {
+    .container-app {
+        max-width: 335px;
+    }   
+}
