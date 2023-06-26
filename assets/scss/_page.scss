@@ -1,9 +1,28 @@
 main.page {
-    header.site-header {}
+    align-items: center;
+    background-color: $dark_blue;
+    display: flex;
+    flex-flow: column nowrap;
+    font: $bold 20px $font;
+    height: 100vh;
+    justify-content: space-between;
     section.site-content {
         .card {
-            h2 {}
-            p {}
+            background-color: $dark_grayish_blue;
+            border-radius: 10px;
+            padding: 40px;
+            position: relative;
+            text-align: center;
+            h2 {
+                color: $neon_green;
+                font: $bold 12px $font;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+            p {
+                color: $light_cyan;
+                padding: 30px 15px;
+            }
             div.divider {
                 .desktop {
                     display: block;
@@ -12,7 +31,55 @@ main.page {
                     display: none;
                 }
             }
+            button.button {
+                background-color: $neon_green;
+                border: 0 none;
+                border-radius: 100px;
+                bottom: -25px;
+                color: $light_cyan;
+                height: 50px;
+                left: 50%;
+                padding: 0;
+                position: absolute;
+                transform: translateX(-50%);
+                transition: all .25s ease;
+                width: 50px;
+                &:hover {
+                    box-shadow: 0 0 20px $neon_green;
+                }
+            }
         }
     }
-    footer.site-footer {}
+    footer.site-footer {
+        background-color: $dark_grayish_blue;
+        color: $light_cyan;
+        font: $light 12px $font;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+        a {
+            color: $neon_green;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 401px) {
+    main.page {
+        section.site-content {
+            .card {
+                padding: 40px 20px;
+                div.divider {
+                    .desktop {
+                        display: none;
+                    }
+                    .mobile {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
 }
