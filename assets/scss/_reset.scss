@@ -26,13 +26,13 @@ ol, ul {
     list-style: none;
 }
 
-blockquote, q {
-    quotes: none;
-    &:before, &:after {
-        content: '';
-        content: none;
-    }
-}
+// blockquote, q {
+//     quotes: none;
+//     &:before, &:after {
+//         content: '';
+//         content: none;
+//     }
+// }
 
 table {
     border-collapse: collapse;
