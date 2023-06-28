@@ -1,5 +1,6 @@
 const linkApi1 = "https://api.adviceslip.com/advice";
 const linkApi2 = "https://api.quotable.io/random";
+const timestamp = Date.now()
 
 const id = document.getElementById("id")
 const advice = document.getElementById("advice")
@@ -8,7 +9,8 @@ const btnAdvice = document.getElementById("btnAdvice")
 btnAdvice.addEventListener("click", getAdvice)
 
 function getAdvice() {
-    fetch(linkApi1)
+
+    fetch(`${linkApi1}?timestamp=${timestamp}`)
     .then(response => {
         if(!response.ok) {
             throw new Error("Error in the first API")
@@ -28,7 +30,7 @@ function getAdvice() {
 }
 
 function getSecondAdvice() {
-    fetch(linkApi2)
+    fetch(`${linkApi2}?timestamp=${timestamp}`)
     .then(response => {
         if(!response.ok) {
             throw new Error("You are very unlucky. Error in the second API as well")
