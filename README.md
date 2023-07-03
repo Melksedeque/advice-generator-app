@@ -58,51 +58,31 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+This project helped me better understand APIs and how to consume them in my JavaScript code. The use of an API can greatly simplify the work when you need to consume external data, without the need to query the database. Even because, you don't always have access to the database when you are developing an application that will fetch data from a system that is not your own.
 
-To see how you can add code snippets, see below:
+In addition to learning how to consume an API correctly, in this project I also learned that at times, the browser keeps a cache of data, which interferes when requesting a new advice by clicking on the button.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const timestamp = Date.now()
+
+function getAdvice() {
+    fetch(`${linkApi1}?timestamp=${timestamp}`)
+    // ... rest of the code
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+In this way, using a timestamp, I was able to generate a unique URL when consuming the API, which allows it to be a new URL with each button click, preventing the cache in the browser from generating the same advice over and over again.
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+This project was my first learning how to consume an API. Now, to continue my development, I will carry out new projects using APIs to better understand this whole process and, in the future, start my studies and development using ReactJS.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [How to prevent HTTP caching of REST calls in browser?](https://stackoverflow.com/questions/64331735/how-to-prevent-http-caching-of-rest-calls-in-browser) - This link helped me to solve the browser caching issue when consuming the API. Within the examples contained therein, is what I used in my project. Create a const with Date.now() and add it to the API URL.
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Melksedeque Silva](https://github.com/Melksedeque/)
+- Frontend Mentor - [@Melksedeque](https://www.frontendmentor.io/profile/Melksedeque)
+- Twitter - [@SouzaMelk](https://twitter.com/SouzaMelk)
