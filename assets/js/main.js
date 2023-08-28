@@ -21,6 +21,7 @@ function getAdvice() {
         const adviceText = data.slip.advice
         id.textContent = adviceId
         advice.textContent = adviceText
+        btnAdvice.removeEventListener("click", getAdvice)
     })
     .catch(error => {
         console.log("Error getting the advice from AdviceSlip: ", error)
@@ -41,6 +42,7 @@ function getSecondAdvice() {
         const adviceText = data.content
         id.textContent = adviceId
         advice.textContent = adviceText
+        btnAdvice.removeEventListener("click", getAdvice)
     })
     .catch(error => {
         console.log("Error getting the advice from Quotable.io: ", error)
