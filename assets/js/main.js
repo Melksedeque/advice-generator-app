@@ -9,7 +9,6 @@ const btnAdvice = document.getElementById("btnAdvice")
 btnAdvice.addEventListener("click", getAdvice)
 
 function getAdvice() {
-
     fetch(`${linkApi1}?timestamp=${timestamp}`)
     .then(response => {
         if(!response.ok) {
